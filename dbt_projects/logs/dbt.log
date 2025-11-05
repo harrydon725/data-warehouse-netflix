@@ -1,0 +1,1188 @@
+[0m09:00:23.384945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112774f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1127ef850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1127eff90>]}
+
+
+============================== 09:00:23.387743 | 7f5c82df-7294-45fc-9b99-5365ae4b50b7 ==============================
+[0m09:00:23.387743 [info ] [MainThread]: Running with dbt=1.10.13
+[0m09:00:23.388262 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'quiet': 'False', 'target_path': 'None', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'write_json': 'True', 'log_cache_events': 'False', 'version_check': 'True', 'log_format': 'default', 'fail_fast': 'False', 'empty': 'None', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'partial_parse': 'True', 'log_path': '/Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/logs', 'no_print': 'None', 'printer_width': '80', 'debug': 'False', 'invocation_command': 'dbt debug', 'profiles_dir': '/Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects', 'warn_error': 'None'}
+[0m09:00:23.401754 [info ] [MainThread]: dbt version: 1.10.13
+[0m09:00:23.402002 [info ] [MainThread]: python version: 3.11.2
+[0m09:00:23.402183 [info ] [MainThread]: python path: /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/venv/bin/python
+[0m09:00:23.402332 [info ] [MainThread]: os info: macOS-14.8.1-arm64-arm-64bit
+[0m09:00:23.505382 [info ] [MainThread]: Using profiles dir at /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects
+[0m09:00:23.506008 [info ] [MainThread]: Using profiles.yml file at /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/profiles.yml
+[0m09:00:23.506190 [info ] [MainThread]: Using dbt_project.yml file at /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/dbt_project.yml
+[0m09:00:23.507703 [info ] [MainThread]: adapter type: postgres
+[0m09:00:23.507892 [info ] [MainThread]: adapter version: 1.9.1
+[0m09:00:23.586048 [info ] [MainThread]: Configuration:
+[0m09:00:23.586548 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m09:00:23.587091 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m09:00:23.587522 [info ] [MainThread]: Required dependencies:
+[0m09:00:23.587738 [debug] [MainThread]: Executing "git --help"
+[0m09:00:23.613858 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:00:23.614617 [debug] [MainThread]: STDERR: "b''"
+[0m09:00:23.614838 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:00:23.615028 [info ] [MainThread]: Connection:
+[0m09:00:23.615235 [info ] [MainThread]:   host: localhost
+[0m09:00:23.615367 [info ] [MainThread]:   port: 5433
+[0m09:00:23.615496 [info ] [MainThread]:   user: postgres
+[0m09:00:23.615621 [info ] [MainThread]:   database: mydb
+[0m09:00:23.615744 [info ] [MainThread]:   schema: dbt_warehouse
+[0m09:00:23.615867 [info ] [MainThread]:   connect_timeout: 10
+[0m09:00:23.615988 [info ] [MainThread]:   role: None
+[0m09:00:23.616110 [info ] [MainThread]:   search_path: None
+[0m09:00:23.616231 [info ] [MainThread]:   keepalives_idle: 0
+[0m09:00:23.616399 [info ] [MainThread]:   sslmode: None
+[0m09:00:23.616985 [info ] [MainThread]:   sslcert: None
+[0m09:00:23.617147 [info ] [MainThread]:   sslkey: None
+[0m09:00:23.617291 [info ] [MainThread]:   sslrootcert: None
+[0m09:00:23.617422 [info ] [MainThread]:   application_name: dbt
+[0m09:00:23.617549 [info ] [MainThread]:   retries: 1
+[0m09:00:23.618048 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m09:00:23.693718 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m09:00:23.744285 [debug] [MainThread]: Using postgres connection "debug"
+[0m09:00:23.744509 [debug] [MainThread]: On debug: select 1 as id
+[0m09:00:23.744658 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:00:23.941790 [debug] [MainThread]: SQL status: SELECT 1 in 0.197 seconds
+[0m09:00:23.944889 [debug] [MainThread]: On debug: Close
+[0m09:00:23.945153 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m09:00:23.945362 [info ] [MainThread]: [32mAll checks passed![0m
+[0m09:00:23.951050 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.62133676, "process_in_blocks": "0", "process_kernel_time": 0.296403, "process_mem_max_rss": "123404288", "process_out_blocks": "0", "process_user_time": 0.914026}
+[0m09:00:23.951337 [debug] [MainThread]: Command `dbt debug` succeeded at 09:00:23.951284 after 0.62 seconds
+[0m09:00:23.951521 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m09:00:23.951701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1127cf450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1127ce110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103010ed0>]}
+[0m09:00:23.952179 [debug] [MainThread]: Flushing usage events
+[0m09:00:24.625929 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:14:36.114049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1117cdb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1117cc610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11179ce50>]}
+
+
+============================== 09:14:36.117337 | 3d37253d-6948-40e1-8153-6fcc0423db1b ==============================
+[0m09:14:36.117337 [info ] [MainThread]: Running with dbt=1.10.13
+[0m09:14:36.117718 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'fail_fast': 'False', 'profiles_dir': '/Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects', 'version_check': 'True', 'invocation_command': 'dbt run', 'quiet': 'False', 'use_colors': 'True', 'log_format': 'default', 'log_cache_events': 'False', 'introspect': 'True', 'static_parser': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'empty': 'False', 'printer_width': '80', 'target_path': 'None', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'warn_error': 'None', 'cache_selected_only': 'False', 'indirect_selection': 'eager'}
+[0m09:14:36.276186 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3d37253d-6948-40e1-8153-6fcc0423db1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11261c7d0>]}
+[0m09:14:36.304798 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3d37253d-6948-40e1-8153-6fcc0423db1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067c9250>]}
+[0m09:14:36.305528 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m09:14:36.366978 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m09:14:36.367430 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m09:14:36.367645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3d37253d-6948-40e1-8153-6fcc0423db1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112f767d0>]}
+[0m09:14:36.894210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3d37253d-6948-40e1-8153-6fcc0423db1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1131a34d0>]}
+[0m09:14:36.926406 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/manifest.json
+[0m09:14:36.927609 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/semantic_manifest.json
+[0m09:14:36.942592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3d37253d-6948-40e1-8153-6fcc0423db1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1136030d0>]}
+[0m09:14:36.942848 [info ] [MainThread]: Found 1 model, 1 source, 451 macros
+[0m09:14:36.943025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3d37253d-6948-40e1-8153-6fcc0423db1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11353c890>]}
+[0m09:14:36.943759 [info ] [MainThread]: 
+[0m09:14:36.943937 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m09:14:36.944073 [info ] [MainThread]: 
+[0m09:14:36.944312 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m09:14:36.944709 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mydb'
+[0m09:14:36.991028 [debug] [ThreadPool]: Using postgres connection "list_mydb"
+[0m09:14:36.991280 [debug] [ThreadPool]: On list_mydb: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "connection_name": "list_mydb"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m09:14:36.991466 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:14:37.079356 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.088 seconds
+[0m09:14:37.080171 [debug] [ThreadPool]: On list_mydb: Close
+[0m09:14:37.080583 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_mydb, now create_mydb_dbt_warehouse)
+[0m09:14:37.080880 [debug] [ThreadPool]: Creating schema "database: "mydb"
+schema: "dbt_warehouse"
+"
+[0m09:14:37.083717 [debug] [ThreadPool]: Using postgres connection "create_mydb_dbt_warehouse"
+[0m09:14:37.083897 [debug] [ThreadPool]: On create_mydb_dbt_warehouse: BEGIN
+[0m09:14:37.084037 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:14:37.094756 [debug] [ThreadPool]: SQL status: BEGIN in 0.011 seconds
+[0m09:14:37.094996 [debug] [ThreadPool]: Using postgres connection "create_mydb_dbt_warehouse"
+[0m09:14:37.095175 [debug] [ThreadPool]: On create_mydb_dbt_warehouse: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "connection_name": "create_mydb_dbt_warehouse"} */
+create schema if not exists "dbt_warehouse"
+[0m09:14:37.098447 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.003 seconds
+[0m09:14:37.099042 [debug] [ThreadPool]: On create_mydb_dbt_warehouse: COMMIT
+[0m09:14:37.099220 [debug] [ThreadPool]: Using postgres connection "create_mydb_dbt_warehouse"
+[0m09:14:37.099364 [debug] [ThreadPool]: On create_mydb_dbt_warehouse: COMMIT
+[0m09:14:37.101303 [debug] [ThreadPool]: SQL status: COMMIT in 0.002 seconds
+[0m09:14:37.101476 [debug] [ThreadPool]: On create_mydb_dbt_warehouse: Close
+[0m09:14:37.102087 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mydb_dbt_warehouse'
+[0m09:14:37.105315 [debug] [ThreadPool]: Using postgres connection "list_mydb_dbt_warehouse"
+[0m09:14:37.105490 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: BEGIN
+[0m09:14:37.105629 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:14:37.118026 [debug] [ThreadPool]: SQL status: BEGIN in 0.012 seconds
+[0m09:14:37.118291 [debug] [ThreadPool]: Using postgres connection "list_mydb_dbt_warehouse"
+[0m09:14:37.118511 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "connection_name": "list_mydb_dbt_warehouse"} */
+select
+      'mydb' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_warehouse'
+    union all
+    select
+      'mydb' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_warehouse'
+    union all
+    select
+      'mydb' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt_warehouse'
+  
+[0m09:14:37.128787 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.010 seconds
+[0m09:14:37.129543 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: ROLLBACK
+[0m09:14:37.129950 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: Close
+[0m09:14:37.132454 [debug] [MainThread]: Using postgres connection "master"
+[0m09:14:37.132632 [debug] [MainThread]: On master: BEGIN
+[0m09:14:37.132774 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:14:37.140168 [debug] [MainThread]: SQL status: BEGIN in 0.007 seconds
+[0m09:14:37.140353 [debug] [MainThread]: Using postgres connection "master"
+[0m09:14:37.140571 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m09:14:37.154588 [debug] [MainThread]: SQL status: SELECT 33 in 0.014 seconds
+[0m09:14:37.155691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3d37253d-6948-40e1-8153-6fcc0423db1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11413f810>]}
+[0m09:14:37.156055 [debug] [MainThread]: On master: ROLLBACK
+[0m09:14:37.156484 [debug] [MainThread]: Using postgres connection "master"
+[0m09:14:37.156644 [debug] [MainThread]: On master: BEGIN
+[0m09:14:37.157261 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m09:14:37.157427 [debug] [MainThread]: On master: COMMIT
+[0m09:14:37.157586 [debug] [MainThread]: Using postgres connection "master"
+[0m09:14:37.157735 [debug] [MainThread]: On master: COMMIT
+[0m09:14:37.158046 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m09:14:37.158207 [debug] [MainThread]: On master: Close
+[0m09:14:37.160062 [debug] [Thread-1 (]: Began running node model.maker_warehouse.movies
+[0m09:14:37.160346 [info ] [Thread-1 (]: 1 of 1 START sql view model dbt_warehouse.movies ............................... [RUN]
+[0m09:14:37.160593 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly create_mydb_dbt_warehouse, now model.maker_warehouse.movies)
+[0m09:14:37.160784 [debug] [Thread-1 (]: Began compiling node model.maker_warehouse.movies
+[0m09:14:37.164918 [debug] [Thread-1 (]: Writing injected SQL for node "model.maker_warehouse.movies"
+[0m09:14:37.165613 [debug] [Thread-1 (]: Began executing node model.maker_warehouse.movies
+[0m09:14:37.185323 [debug] [Thread-1 (]: Writing runtime sql for node "model.maker_warehouse.movies"
+[0m09:14:37.185965 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:14:37.186164 [debug] [Thread-1 (]: On model.maker_warehouse.movies: BEGIN
+[0m09:14:37.186335 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:14:37.192999 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m09:14:37.193220 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:14:37.193396 [debug] [Thread-1 (]: On model.maker_warehouse.movies: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.movies"} */
+
+  create view "mydb"."dbt_warehouse"."movies__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    DISTINCT
+    title,
+    genres,
+    release_date,
+    movie_id
+FROM mydb.public.raw_netflix
+  );
+[0m09:14:37.201044 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.007 seconds
+[0m09:14:37.204476 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:14:37.204670 [debug] [Thread-1 (]: On model.maker_warehouse.movies: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.movies"} */
+alter table "mydb"."dbt_warehouse"."movies__dbt_tmp" rename to "movies"
+[0m09:14:37.205574 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m09:14:37.213655 [debug] [Thread-1 (]: On model.maker_warehouse.movies: COMMIT
+[0m09:14:37.213861 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:14:37.214028 [debug] [Thread-1 (]: On model.maker_warehouse.movies: COMMIT
+[0m09:14:37.215358 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m09:14:37.218350 [debug] [Thread-1 (]: Applying DROP to: "mydb"."dbt_warehouse"."movies__dbt_backup"
+[0m09:14:37.220733 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:14:37.220920 [debug] [Thread-1 (]: On model.maker_warehouse.movies: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.movies"} */
+drop view if exists "mydb"."dbt_warehouse"."movies__dbt_backup" cascade
+[0m09:14:37.221384 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m09:14:37.222532 [debug] [Thread-1 (]: On model.maker_warehouse.movies: Close
+[0m09:14:37.223597 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3d37253d-6948-40e1-8153-6fcc0423db1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11411c390>]}
+[0m09:14:37.223918 [info ] [Thread-1 (]: 1 of 1 OK created sql view model dbt_warehouse.movies .......................... [[32mCREATE VIEW[0m in 0.06s]
+[0m09:14:37.224192 [debug] [Thread-1 (]: Finished running node model.maker_warehouse.movies
+[0m09:14:37.224847 [debug] [MainThread]: Using postgres connection "master"
+[0m09:14:37.224996 [debug] [MainThread]: On master: BEGIN
+[0m09:14:37.225131 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m09:14:37.230961 [debug] [MainThread]: SQL status: BEGIN in 0.006 seconds
+[0m09:14:37.231150 [debug] [MainThread]: On master: COMMIT
+[0m09:14:37.231302 [debug] [MainThread]: Using postgres connection "master"
+[0m09:14:37.231433 [debug] [MainThread]: On master: COMMIT
+[0m09:14:37.231808 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m09:14:37.231950 [debug] [MainThread]: On master: Close
+[0m09:14:37.232148 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:14:37.232278 [debug] [MainThread]: Connection 'model.maker_warehouse.movies' was properly closed.
+[0m09:14:37.232400 [debug] [MainThread]: Connection 'list_mydb_dbt_warehouse' was properly closed.
+[0m09:14:37.232549 [info ] [MainThread]: 
+[0m09:14:37.232708 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.29 seconds (0.29s).
+[0m09:14:37.233023 [debug] [MainThread]: Command end result
+[0m09:14:37.243017 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/manifest.json
+[0m09:14:37.244155 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/semantic_manifest.json
+[0m09:14:37.246943 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/run_results.json
+[0m09:14:37.247109 [info ] [MainThread]: 
+[0m09:14:37.247311 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:14:37.247453 [info ] [MainThread]: 
+[0m09:14:37.247607 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m09:14:37.267803 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.1993917, "process_in_blocks": "0", "process_kernel_time": 0.242633, "process_mem_max_rss": "133578752", "process_out_blocks": "0", "process_user_time": 1.412249}
+[0m09:14:37.268127 [debug] [MainThread]: Command `dbt run` succeeded at 09:14:37.268074 after 1.20 seconds
+[0m09:14:37.268334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104994ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1117cdb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1048e7d10>]}
+[0m09:14:37.268517 [debug] [MainThread]: Flushing usage events
+[0m09:14:37.801163 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:18:35.773843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056d3dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056e3850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056e39d0>]}
+
+
+============================== 09:18:35.776709 | 7ef9ab60-308c-4974-b640-a6d0edb4620c ==============================
+[0m09:18:35.776709 [info ] [MainThread]: Running with dbt=1.10.13
+[0m09:18:35.777040 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'log_path': '/Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/logs', 'write_json': 'True', 'log_cache_events': 'False', 'debug': 'False', 'partial_parse': 'True', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'version_check': 'True', 'printer_width': '80', 'profiles_dir': '/Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects', 'no_print': 'None', 'quiet': 'False', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'cache_selected_only': 'False', 'use_colors': 'True', 'empty': 'False'}
+[0m09:18:35.883814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7ef9ab60-308c-4974-b640-a6d0edb4620c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d29450>]}
+[0m09:18:35.911042 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7ef9ab60-308c-4974-b640-a6d0edb4620c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102d54c50>]}
+[0m09:18:35.911627 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m09:18:35.968364 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m09:18:36.037163 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m09:18:36.037457 [debug] [MainThread]: Partial parsing: updated file: maker_warehouse://models/facts/movies.sql
+[0m09:18:36.154564 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7ef9ab60-308c-4974-b640-a6d0edb4620c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106398e50>]}
+[0m09:18:36.211803 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/manifest.json
+[0m09:18:36.221290 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/semantic_manifest.json
+[0m09:18:36.239591 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7ef9ab60-308c-4974-b640-a6d0edb4620c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1068cbfd0>]}
+[0m09:18:36.239900 [info ] [MainThread]: Found 1 model, 1 source, 451 macros
+[0m09:18:36.240093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7ef9ab60-308c-4974-b640-a6d0edb4620c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10689bad0>]}
+[0m09:18:36.240931 [info ] [MainThread]: 
+[0m09:18:36.241136 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m09:18:36.241380 [info ] [MainThread]: 
+[0m09:18:36.241667 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m09:18:36.242130 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mydb'
+[0m09:18:36.299889 [debug] [ThreadPool]: Using postgres connection "list_mydb"
+[0m09:18:36.300105 [debug] [ThreadPool]: On list_mydb: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "connection_name": "list_mydb"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m09:18:36.300244 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:18:36.426659 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.126 seconds
+[0m09:18:36.427405 [debug] [ThreadPool]: On list_mydb: Close
+[0m09:18:36.428092 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mydb_dbt_warehouse'
+[0m09:18:36.431509 [debug] [ThreadPool]: Using postgres connection "list_mydb_dbt_warehouse"
+[0m09:18:36.431692 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: BEGIN
+[0m09:18:36.431832 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:18:36.440087 [debug] [ThreadPool]: SQL status: BEGIN in 0.008 seconds
+[0m09:18:36.440272 [debug] [ThreadPool]: Using postgres connection "list_mydb_dbt_warehouse"
+[0m09:18:36.440441 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "connection_name": "list_mydb_dbt_warehouse"} */
+select
+      'mydb' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_warehouse'
+    union all
+    select
+      'mydb' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_warehouse'
+    union all
+    select
+      'mydb' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt_warehouse'
+  
+[0m09:18:36.449097 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.008 seconds
+[0m09:18:36.449771 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: ROLLBACK
+[0m09:18:36.450145 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: Close
+[0m09:18:36.452482 [debug] [MainThread]: Using postgres connection "master"
+[0m09:18:36.452659 [debug] [MainThread]: On master: BEGIN
+[0m09:18:36.452802 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:18:36.460029 [debug] [MainThread]: SQL status: BEGIN in 0.007 seconds
+[0m09:18:36.460203 [debug] [MainThread]: Using postgres connection "master"
+[0m09:18:36.460397 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m09:18:36.468970 [debug] [MainThread]: SQL status: SELECT 34 in 0.008 seconds
+[0m09:18:36.469931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7ef9ab60-308c-4974-b640-a6d0edb4620c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10652f350>]}
+[0m09:18:36.470185 [debug] [MainThread]: On master: ROLLBACK
+[0m09:18:36.470576 [debug] [MainThread]: Using postgres connection "master"
+[0m09:18:36.470724 [debug] [MainThread]: On master: BEGIN
+[0m09:18:36.471279 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m09:18:36.471539 [debug] [MainThread]: On master: COMMIT
+[0m09:18:36.471752 [debug] [MainThread]: Using postgres connection "master"
+[0m09:18:36.471914 [debug] [MainThread]: On master: COMMIT
+[0m09:18:36.472236 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m09:18:36.472396 [debug] [MainThread]: On master: Close
+[0m09:18:36.473980 [debug] [Thread-1 (]: Began running node model.maker_warehouse.movies
+[0m09:18:36.474246 [info ] [Thread-1 (]: 1 of 1 START sql table model dbt_warehouse.movies .............................. [RUN]
+[0m09:18:36.474483 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_mydb, now model.maker_warehouse.movies)
+[0m09:18:36.474662 [debug] [Thread-1 (]: Began compiling node model.maker_warehouse.movies
+[0m09:18:36.478542 [debug] [Thread-1 (]: Writing injected SQL for node "model.maker_warehouse.movies"
+[0m09:18:36.478948 [debug] [Thread-1 (]: Began executing node model.maker_warehouse.movies
+[0m09:18:36.499142 [debug] [Thread-1 (]: Writing runtime sql for node "model.maker_warehouse.movies"
+[0m09:18:36.499724 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:18:36.499907 [debug] [Thread-1 (]: On model.maker_warehouse.movies: BEGIN
+[0m09:18:36.500059 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:18:36.507129 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m09:18:36.507319 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:18:36.507496 [debug] [Thread-1 (]: On model.maker_warehouse.movies: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.movies"} */
+
+  
+    
+
+  create  table "mydb"."dbt_warehouse"."movies__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+
+SELECT
+    DISTINCT
+    title,
+    genres,
+    release_date,
+    movie_id
+FROM mydb.public.raw_netflix
+  );
+  
+[0m09:18:38.329930 [debug] [Thread-1 (]: SQL status: SELECT 8472 in 1.821 seconds
+[0m09:18:38.352356 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:18:38.352914 [debug] [Thread-1 (]: On model.maker_warehouse.movies: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.movies"} */
+alter table "mydb"."dbt_warehouse"."movies" rename to "movies__dbt_backup"
+[0m09:18:38.355208 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m09:18:38.357819 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:18:38.358326 [debug] [Thread-1 (]: On model.maker_warehouse.movies: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.movies"} */
+alter table "mydb"."dbt_warehouse"."movies__dbt_tmp" rename to "movies"
+[0m09:18:38.359172 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m09:18:38.371426 [debug] [Thread-1 (]: On model.maker_warehouse.movies: COMMIT
+[0m09:18:38.371856 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:18:38.372240 [debug] [Thread-1 (]: On model.maker_warehouse.movies: COMMIT
+[0m09:18:38.378058 [debug] [Thread-1 (]: SQL status: COMMIT in 0.005 seconds
+[0m09:18:38.382722 [debug] [Thread-1 (]: Applying DROP to: "mydb"."dbt_warehouse"."movies__dbt_backup"
+[0m09:18:38.386074 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:18:38.386385 [debug] [Thread-1 (]: On model.maker_warehouse.movies: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.movies"} */
+drop view if exists "mydb"."dbt_warehouse"."movies__dbt_backup" cascade
+[0m09:18:38.391393 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.005 seconds
+[0m09:18:38.393332 [debug] [Thread-1 (]: On model.maker_warehouse.movies: Close
+[0m09:18:38.395043 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ef9ab60-308c-4974-b640-a6d0edb4620c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106714a50>]}
+[0m09:18:38.395519 [info ] [Thread-1 (]: 1 of 1 OK created sql table model dbt_warehouse.movies ......................... [[32mSELECT 8472[0m in 1.92s]
+[0m09:18:38.395877 [debug] [Thread-1 (]: Finished running node model.maker_warehouse.movies
+[0m09:18:38.396749 [debug] [MainThread]: Using postgres connection "master"
+[0m09:18:38.396924 [debug] [MainThread]: On master: BEGIN
+[0m09:18:38.397075 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m09:18:38.409369 [debug] [MainThread]: SQL status: BEGIN in 0.012 seconds
+[0m09:18:38.409606 [debug] [MainThread]: On master: COMMIT
+[0m09:18:38.409832 [debug] [MainThread]: Using postgres connection "master"
+[0m09:18:38.410076 [debug] [MainThread]: On master: COMMIT
+[0m09:18:38.410487 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m09:18:38.410701 [debug] [MainThread]: On master: Close
+[0m09:18:38.410949 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:18:38.411136 [debug] [MainThread]: Connection 'model.maker_warehouse.movies' was properly closed.
+[0m09:18:38.411395 [debug] [MainThread]: Connection 'list_mydb_dbt_warehouse' was properly closed.
+[0m09:18:38.412260 [info ] [MainThread]: 
+[0m09:18:38.412562 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 2.17 seconds (2.17s).
+[0m09:18:38.413302 [debug] [MainThread]: Command end result
+[0m09:18:38.430210 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/manifest.json
+[0m09:18:38.431670 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/semantic_manifest.json
+[0m09:18:38.435227 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/run_results.json
+[0m09:18:38.435433 [info ] [MainThread]: 
+[0m09:18:38.435665 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:18:38.435832 [info ] [MainThread]: 
+[0m09:18:38.436022 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m09:18:38.437785 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.7047167, "process_in_blocks": "0", "process_kernel_time": 0.222811, "process_mem_max_rss": "131563520", "process_out_blocks": "0", "process_user_time": 1.121784}
+[0m09:18:38.438077 [debug] [MainThread]: Command `dbt run` succeeded at 09:18:38.438027 after 2.71 seconds
+[0m09:18:38.438326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100f20ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056f8e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100e73d10>]}
+[0m09:18:38.438622 [debug] [MainThread]: Flushing usage events
+[0m09:18:38.998238 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:26:57.489377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10996f290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1099c4610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109995290>]}
+
+
+============================== 09:26:57.492185 | 0c2b9903-84c8-4863-9d75-9587218a6b07 ==============================
+[0m09:26:57.492185 [info ] [MainThread]: Running with dbt=1.10.13
+[0m09:26:57.492514 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'no_print': 'None', 'log_path': '/Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/logs', 'fail_fast': 'False', 'indirect_selection': 'eager', 'partial_parse': 'True', 'use_colors': 'True', 'empty': 'False', 'quiet': 'False', 'use_experimental_parser': 'False', 'version_check': 'True', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'target_path': 'None', 'invocation_command': 'dbt run', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'static_parser': 'True', 'profiles_dir': '/Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects', 'printer_width': '80'}
+[0m09:26:57.601448 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0c2b9903-84c8-4863-9d75-9587218a6b07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ff3c90>]}
+[0m09:26:57.630885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0c2b9903-84c8-4863-9d75-9587218a6b07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107048a10>]}
+[0m09:26:57.631512 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m09:26:57.693762 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m09:26:57.765588 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 4 files added, 0 files changed.
+[0m09:26:57.765872 [debug] [MainThread]: Partial parsing: added file: maker_warehouse://models/dimensions/users.sql
+[0m09:26:57.766058 [debug] [MainThread]: Partial parsing: added file: maker_warehouse://models/dimensions/movies.sql
+[0m09:26:57.766215 [debug] [MainThread]: Partial parsing: added file: maker_warehouse://models/dimensions/genres.sql
+[0m09:26:57.766363 [debug] [MainThread]: Partial parsing: added file: maker_warehouse://models/facts/streams.sql
+[0m09:26:57.766505 [debug] [MainThread]: Partial parsing: deleted file: maker_warehouse://models/facts/movies.sql
+[0m09:26:57.890228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0c2b9903-84c8-4863-9d75-9587218a6b07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1099c5790>]}
+[0m09:26:57.922869 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/manifest.json
+[0m09:26:57.924479 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/semantic_manifest.json
+[0m09:26:57.937082 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0c2b9903-84c8-4863-9d75-9587218a6b07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10abffd50>]}
+[0m09:26:57.937322 [info ] [MainThread]: Found 4 models, 1 source, 451 macros
+[0m09:26:57.937498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0c2b9903-84c8-4863-9d75-9587218a6b07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ab30810>]}
+[0m09:26:57.938354 [info ] [MainThread]: 
+[0m09:26:57.938528 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m09:26:57.938664 [info ] [MainThread]: 
+[0m09:26:57.938897 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m09:26:57.940734 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mydb'
+[0m09:26:57.998345 [debug] [ThreadPool]: Using postgres connection "list_mydb"
+[0m09:26:57.998565 [debug] [ThreadPool]: On list_mydb: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "connection_name": "list_mydb"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m09:26:57.998706 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:26:58.097109 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.098 seconds
+[0m09:26:58.097871 [debug] [ThreadPool]: On list_mydb: Close
+[0m09:26:58.098641 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_mydb, now list_mydb_dbt_warehouse)
+[0m09:26:58.101850 [debug] [ThreadPool]: Using postgres connection "list_mydb_dbt_warehouse"
+[0m09:26:58.102019 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: BEGIN
+[0m09:26:58.102156 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:26:58.110283 [debug] [ThreadPool]: SQL status: BEGIN in 0.008 seconds
+[0m09:26:58.110490 [debug] [ThreadPool]: Using postgres connection "list_mydb_dbt_warehouse"
+[0m09:26:58.110677 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "connection_name": "list_mydb_dbt_warehouse"} */
+select
+      'mydb' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_warehouse'
+    union all
+    select
+      'mydb' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_warehouse'
+    union all
+    select
+      'mydb' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt_warehouse'
+  
+[0m09:26:58.120690 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.010 seconds
+[0m09:26:58.121392 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: ROLLBACK
+[0m09:26:58.121771 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: Close
+[0m09:26:58.124309 [debug] [MainThread]: Using postgres connection "master"
+[0m09:26:58.124483 [debug] [MainThread]: On master: BEGIN
+[0m09:26:58.124627 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:26:58.142733 [debug] [MainThread]: SQL status: BEGIN in 0.018 seconds
+[0m09:26:58.142984 [debug] [MainThread]: Using postgres connection "master"
+[0m09:26:58.143202 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m09:26:58.149874 [debug] [MainThread]: SQL status: SELECT 33 in 0.006 seconds
+[0m09:26:58.150964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0c2b9903-84c8-4863-9d75-9587218a6b07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aa46710>]}
+[0m09:26:58.151258 [debug] [MainThread]: On master: ROLLBACK
+[0m09:26:58.151702 [debug] [MainThread]: Using postgres connection "master"
+[0m09:26:58.151869 [debug] [MainThread]: On master: BEGIN
+[0m09:26:58.152519 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m09:26:58.152748 [debug] [MainThread]: On master: COMMIT
+[0m09:26:58.152958 [debug] [MainThread]: Using postgres connection "master"
+[0m09:26:58.153127 [debug] [MainThread]: On master: COMMIT
+[0m09:26:58.153503 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m09:26:58.153712 [debug] [MainThread]: On master: Close
+[0m09:26:58.155746 [debug] [Thread-1 (]: Began running node model.maker_warehouse.genres
+[0m09:26:58.155969 [debug] [Thread-2 (]: Began running node model.maker_warehouse.movies
+[0m09:26:58.156410 [debug] [Thread-3 (]: Began running node model.maker_warehouse.streams
+[0m09:26:58.156243 [info ] [Thread-1 (]: 1 of 4 START sql table model dbt_warehouse.genres .............................. [RUN]
+[0m09:26:58.156657 [debug] [Thread-4 (]: Began running node model.maker_warehouse.users
+[0m09:26:58.156887 [info ] [Thread-2 (]: 2 of 4 START sql table model dbt_warehouse.movies .............................. [RUN]
+[0m09:26:58.157142 [info ] [Thread-3 (]: 3 of 4 START sql table model dbt_warehouse.streams ............................. [RUN]
+[0m09:26:58.157428 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_mydb_dbt_warehouse, now model.maker_warehouse.genres)
+[0m09:26:58.157690 [info ] [Thread-4 (]: 4 of 4 START sql table model dbt_warehouse.users ............................... [RUN]
+[0m09:26:58.157987 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.maker_warehouse.movies'
+[0m09:26:58.158252 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.maker_warehouse.streams'
+[0m09:26:58.158446 [debug] [Thread-1 (]: Began compiling node model.maker_warehouse.genres
+[0m09:26:58.158685 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.maker_warehouse.users'
+[0m09:26:58.158863 [debug] [Thread-2 (]: Began compiling node model.maker_warehouse.movies
+[0m09:26:58.159062 [debug] [Thread-3 (]: Began compiling node model.maker_warehouse.streams
+[0m09:26:58.163287 [debug] [Thread-1 (]: Writing injected SQL for node "model.maker_warehouse.genres"
+[0m09:26:58.163512 [debug] [Thread-4 (]: Began compiling node model.maker_warehouse.users
+[0m09:26:58.165187 [debug] [Thread-2 (]: Writing injected SQL for node "model.maker_warehouse.movies"
+[0m09:26:58.167107 [debug] [Thread-3 (]: Writing injected SQL for node "model.maker_warehouse.streams"
+[0m09:26:58.168701 [debug] [Thread-4 (]: Writing injected SQL for node "model.maker_warehouse.users"
+[0m09:26:58.169117 [debug] [Thread-1 (]: Began executing node model.maker_warehouse.genres
+[0m09:26:58.169326 [debug] [Thread-2 (]: Began executing node model.maker_warehouse.movies
+[0m09:26:58.175467 [debug] [Thread-3 (]: Began executing node model.maker_warehouse.streams
+[0m09:26:58.187966 [debug] [Thread-1 (]: Writing runtime sql for node "model.maker_warehouse.genres"
+[0m09:26:58.188159 [debug] [Thread-4 (]: Began executing node model.maker_warehouse.users
+[0m09:26:58.190756 [debug] [Thread-2 (]: Writing runtime sql for node "model.maker_warehouse.movies"
+[0m09:26:58.192345 [debug] [Thread-3 (]: Writing runtime sql for node "model.maker_warehouse.streams"
+[0m09:26:58.194095 [debug] [Thread-4 (]: Writing runtime sql for node "model.maker_warehouse.users"
+[0m09:26:58.194494 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.genres"
+[0m09:26:58.194759 [debug] [Thread-2 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:26:58.194937 [debug] [Thread-1 (]: On model.maker_warehouse.genres: BEGIN
+[0m09:26:58.195121 [debug] [Thread-4 (]: Using postgres connection "model.maker_warehouse.users"
+[0m09:26:58.195345 [debug] [Thread-3 (]: Using postgres connection "model.maker_warehouse.streams"
+[0m09:26:58.195515 [debug] [Thread-2 (]: On model.maker_warehouse.movies: BEGIN
+[0m09:26:58.195689 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:26:58.195856 [debug] [Thread-4 (]: On model.maker_warehouse.users: BEGIN
+[0m09:26:58.196010 [debug] [Thread-3 (]: On model.maker_warehouse.streams: BEGIN
+[0m09:26:58.196156 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m09:26:58.196381 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m09:26:58.196551 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m09:26:58.206371 [debug] [Thread-2 (]: SQL status: BEGIN in 0.010 seconds
+[0m09:26:58.206677 [debug] [Thread-2 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:26:58.206952 [debug] [Thread-2 (]: On model.maker_warehouse.movies: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.movies"} */
+
+  
+    
+
+  create  table "mydb"."dbt_warehouse"."movies__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+
+SELECT
+    DISTINCT
+    title,
+    genres,
+    release_date,
+    movie_id
+FROM mydb.public.raw_netflix
+  );
+  
+[0m09:26:58.207200 [debug] [Thread-1 (]: SQL status: BEGIN in 0.011 seconds
+[0m09:26:58.207429 [debug] [Thread-4 (]: SQL status: BEGIN in 0.011 seconds
+[0m09:26:58.207601 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.genres"
+[0m09:26:58.207763 [debug] [Thread-3 (]: SQL status: BEGIN in 0.011 seconds
+[0m09:26:58.207943 [debug] [Thread-4 (]: Using postgres connection "model.maker_warehouse.users"
+[0m09:26:58.208124 [debug] [Thread-1 (]: On model.maker_warehouse.genres: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.genres"} */
+
+  
+    
+
+  create  table "mydb"."dbt_warehouse"."genres__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+
+SELECT
+    DISTINCT
+    genres
+FROM mydb.public.raw_netflix
+  );
+  
+[0m09:26:58.208310 [debug] [Thread-3 (]: Using postgres connection "model.maker_warehouse.streams"
+[0m09:26:58.208488 [debug] [Thread-4 (]: On model.maker_warehouse.users: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.users"} */
+
+  
+    
+
+  create  table "mydb"."dbt_warehouse"."users__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+
+SELECT
+    DISTINCT
+    user_id
+FROM mydb.public.raw_netflix
+  );
+  
+[0m09:26:58.208714 [debug] [Thread-3 (]: On model.maker_warehouse.streams: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.streams"} */
+
+  
+    
+
+  create  table "mydb"."dbt_warehouse"."streams__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    DISTINCT
+    id,
+    user_id,
+    movie_id,
+    genres,
+    date
+FROM mydb.public.raw_netflix
+  );
+  
+[0m09:26:58.209744 [debug] [Thread-3 (]: Postgres adapter: Postgres error: column "date" does not exist
+LINE 20:     date
+             ^
+
+[0m09:26:58.210097 [debug] [Thread-3 (]: On model.maker_warehouse.streams: ROLLBACK
+[0m09:26:58.211055 [debug] [Thread-3 (]: On model.maker_warehouse.streams: Close
+[0m09:26:58.217020 [debug] [Thread-3 (]: Database Error in model streams (models/facts/streams.sql)
+  column "date" does not exist
+  LINE 20:     date
+               ^
+  compiled code at target/run/maker_warehouse/models/facts/streams.sql
+[0m09:26:58.218172 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0c2b9903-84c8-4863-9d75-9587218a6b07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a9cff50>]}
+[0m09:26:58.218553 [error] [Thread-3 (]: 3 of 4 ERROR creating sql table model dbt_warehouse.streams .................... [[31mERROR[0m in 0.06s]
+[0m09:26:58.218859 [debug] [Thread-3 (]: Finished running node model.maker_warehouse.streams
+[0m09:26:58.219118 [debug] [Thread-7 (]: Marking all children of 'model.maker_warehouse.streams' to be skipped because of status 'error'.  Reason: Database Error in model streams (models/facts/streams.sql)
+  column "date" does not exist
+  LINE 20:     date
+               ^
+  compiled code at target/run/maker_warehouse/models/facts/streams.sql.
+[0m09:26:58.534490 [debug] [Thread-1 (]: SQL status: SELECT 1190 in 0.325 seconds
+[0m09:26:58.551873 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.genres"
+[0m09:26:58.552217 [debug] [Thread-1 (]: On model.maker_warehouse.genres: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.genres"} */
+alter table "mydb"."dbt_warehouse"."genres__dbt_tmp" rename to "genres"
+[0m09:26:58.553472 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m09:26:58.563071 [debug] [Thread-1 (]: On model.maker_warehouse.genres: COMMIT
+[0m09:26:58.563818 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.genres"
+[0m09:26:58.564098 [debug] [Thread-1 (]: On model.maker_warehouse.genres: COMMIT
+[0m09:26:58.566202 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m09:26:58.571293 [debug] [Thread-1 (]: Applying DROP to: "mydb"."dbt_warehouse"."genres__dbt_backup"
+[0m09:26:58.574118 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.genres"
+[0m09:26:58.574362 [debug] [Thread-1 (]: On model.maker_warehouse.genres: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.genres"} */
+drop table if exists "mydb"."dbt_warehouse"."genres__dbt_backup" cascade
+[0m09:26:58.575277 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m09:26:58.576618 [debug] [Thread-1 (]: On model.maker_warehouse.genres: Close
+[0m09:26:58.577081 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0c2b9903-84c8-4863-9d75-9587218a6b07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ae76210>]}
+[0m09:26:58.577456 [info ] [Thread-1 (]: 1 of 4 OK created sql table model dbt_warehouse.genres ......................... [[32mSELECT 1190[0m in 0.42s]
+[0m09:26:58.577792 [debug] [Thread-1 (]: Finished running node model.maker_warehouse.genres
+[0m09:26:58.582208 [debug] [Thread-2 (]: SQL status: SELECT 8472 in 0.375 seconds
+[0m09:26:58.584050 [debug] [Thread-2 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:26:58.584302 [debug] [Thread-2 (]: On model.maker_warehouse.movies: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.movies"} */
+alter table "mydb"."dbt_warehouse"."movies" rename to "movies__dbt_backup"
+[0m09:26:58.585222 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m09:26:58.586770 [debug] [Thread-2 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:26:58.586944 [debug] [Thread-2 (]: On model.maker_warehouse.movies: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.movies"} */
+alter table "mydb"."dbt_warehouse"."movies__dbt_tmp" rename to "movies"
+[0m09:26:58.587483 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m09:26:58.589283 [debug] [Thread-2 (]: On model.maker_warehouse.movies: COMMIT
+[0m09:26:58.589468 [debug] [Thread-2 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:26:58.589629 [debug] [Thread-2 (]: On model.maker_warehouse.movies: COMMIT
+[0m09:26:58.595369 [debug] [Thread-2 (]: SQL status: COMMIT in 0.006 seconds
+[0m09:26:58.596882 [debug] [Thread-2 (]: Applying DROP to: "mydb"."dbt_warehouse"."movies__dbt_backup"
+[0m09:26:58.597279 [debug] [Thread-2 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:26:58.597476 [debug] [Thread-2 (]: On model.maker_warehouse.movies: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.movies"} */
+drop table if exists "mydb"."dbt_warehouse"."movies__dbt_backup" cascade
+[0m09:26:58.615041 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.017 seconds
+[0m09:26:58.616231 [debug] [Thread-2 (]: On model.maker_warehouse.movies: Close
+[0m09:26:58.616851 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0c2b9903-84c8-4863-9d75-9587218a6b07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ae83650>]}
+[0m09:26:58.617421 [info ] [Thread-2 (]: 2 of 4 OK created sql table model dbt_warehouse.movies ......................... [[32mSELECT 8472[0m in 0.46s]
+[0m09:26:58.617900 [debug] [Thread-2 (]: Finished running node model.maker_warehouse.movies
+[0m09:26:58.824519 [debug] [Thread-4 (]: SQL status: SELECT 161918 in 0.615 seconds
+[0m09:26:58.829075 [debug] [Thread-4 (]: Using postgres connection "model.maker_warehouse.users"
+[0m09:26:58.829370 [debug] [Thread-4 (]: On model.maker_warehouse.users: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.users"} */
+alter table "mydb"."dbt_warehouse"."users__dbt_tmp" rename to "users"
+[0m09:26:58.830155 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m09:26:58.830948 [debug] [Thread-4 (]: On model.maker_warehouse.users: COMMIT
+[0m09:26:58.831152 [debug] [Thread-4 (]: Using postgres connection "model.maker_warehouse.users"
+[0m09:26:58.831324 [debug] [Thread-4 (]: On model.maker_warehouse.users: COMMIT
+[0m09:26:58.895598 [debug] [Thread-4 (]: SQL status: COMMIT in 0.064 seconds
+[0m09:26:58.900500 [debug] [Thread-4 (]: Applying DROP to: "mydb"."dbt_warehouse"."users__dbt_backup"
+[0m09:26:58.901514 [debug] [Thread-4 (]: Using postgres connection "model.maker_warehouse.users"
+[0m09:26:58.901758 [debug] [Thread-4 (]: On model.maker_warehouse.users: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.users"} */
+drop table if exists "mydb"."dbt_warehouse"."users__dbt_backup" cascade
+[0m09:26:58.902359 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m09:26:58.904413 [debug] [Thread-4 (]: On model.maker_warehouse.users: Close
+[0m09:26:58.904755 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0c2b9903-84c8-4863-9d75-9587218a6b07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f094090>]}
+[0m09:26:58.905105 [info ] [Thread-4 (]: 4 of 4 OK created sql table model dbt_warehouse.users .......................... [[32mSELECT 161918[0m in 0.75s]
+[0m09:26:58.907724 [debug] [Thread-4 (]: Finished running node model.maker_warehouse.users
+[0m09:26:58.908428 [debug] [MainThread]: Using postgres connection "master"
+[0m09:26:58.908579 [debug] [MainThread]: On master: BEGIN
+[0m09:26:58.910651 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m09:26:58.920417 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m09:26:58.920700 [debug] [MainThread]: On master: COMMIT
+[0m09:26:58.920883 [debug] [MainThread]: Using postgres connection "master"
+[0m09:26:58.921040 [debug] [MainThread]: On master: COMMIT
+[0m09:26:58.921416 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m09:26:58.921580 [debug] [MainThread]: On master: Close
+[0m09:26:58.921825 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:26:58.921967 [debug] [MainThread]: Connection 'model.maker_warehouse.genres' was properly closed.
+[0m09:26:58.922091 [debug] [MainThread]: Connection 'model.maker_warehouse.movies' was properly closed.
+[0m09:26:58.922210 [debug] [MainThread]: Connection 'model.maker_warehouse.streams' was properly closed.
+[0m09:26:58.922331 [debug] [MainThread]: Connection 'model.maker_warehouse.users' was properly closed.
+[0m09:26:58.922535 [info ] [MainThread]: 
+[0m09:26:58.922705 [info ] [MainThread]: Finished running 4 table models in 0 hours 0 minutes and 0.98 seconds (0.98s).
+[0m09:26:58.923224 [debug] [MainThread]: Command end result
+[0m09:26:58.935484 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/manifest.json
+[0m09:26:58.936918 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/semantic_manifest.json
+[0m09:26:58.942113 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/run_results.json
+[0m09:26:58.942314 [info ] [MainThread]: 
+[0m09:26:58.942517 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m09:26:58.942729 [info ] [MainThread]: 
+[0m09:26:58.943054 [error] [MainThread]: [31mFailure in model streams (models/facts/streams.sql)[0m
+[0m09:26:58.943337 [error] [MainThread]:   Database Error in model streams (models/facts/streams.sql)
+  column "date" does not exist
+  LINE 20:     date
+               ^
+  compiled code at target/run/maker_warehouse/models/facts/streams.sql
+[0m09:26:58.943571 [info ] [MainThread]: 
+[0m09:26:58.943805 [info ] [MainThread]:   compiled code at target/compiled/maker_warehouse/models/facts/streams.sql
+[0m09:26:58.944000 [info ] [MainThread]: 
+[0m09:26:58.944209 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=4
+[0m09:26:58.947186 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.4944057, "process_in_blocks": "0", "process_kernel_time": 0.227387, "process_mem_max_rss": "136151040", "process_out_blocks": "0", "process_user_time": 1.178614}
+[0m09:26:58.947442 [debug] [MainThread]: Command `dbt run` failed at 09:26:58.947394 after 1.49 seconds
+[0m09:26:58.947754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105214ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10702a6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10516c890>]}
+[0m09:26:58.948163 [debug] [MainThread]: Flushing usage events
+[0m09:26:59.453037 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:27:52.651112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075e1550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075ef9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075ec910>]}
+
+
+============================== 09:27:52.653987 | 60ccbd9f-05a1-4df6-b22b-8c6efb4bd712 ==============================
+[0m09:27:52.653987 [info ] [MainThread]: Running with dbt=1.10.13
+[0m09:27:52.654316 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'log_cache_events': 'False', 'log_path': '/Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/logs', 'indirect_selection': 'eager', 'partial_parse': 'True', 'static_parser': 'True', 'printer_width': '80', 'invocation_command': 'dbt run', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'write_json': 'True', 'fail_fast': 'False', 'profiles_dir': '/Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects', 'cache_selected_only': 'False', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'debug': 'False', 'version_check': 'True', 'no_print': 'None', 'use_colors': 'True'}
+[0m09:27:52.766449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '60ccbd9f-05a1-4df6-b22b-8c6efb4bd712', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f6d290>]}
+[0m09:27:52.794636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '60ccbd9f-05a1-4df6-b22b-8c6efb4bd712', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ccd590>]}
+[0m09:27:52.795286 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m09:27:52.890346 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m09:27:52.961881 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m09:27:52.962182 [debug] [MainThread]: Partial parsing: updated file: maker_warehouse://models/facts/streams.sql
+[0m09:27:53.080090 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '60ccbd9f-05a1-4df6-b22b-8c6efb4bd712', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084938d0>]}
+[0m09:27:53.113090 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/manifest.json
+[0m09:27:53.114250 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/semantic_manifest.json
+[0m09:27:53.127067 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '60ccbd9f-05a1-4df6-b22b-8c6efb4bd712', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108883d50>]}
+[0m09:27:53.127331 [info ] [MainThread]: Found 4 models, 1 source, 451 macros
+[0m09:27:53.127507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '60ccbd9f-05a1-4df6-b22b-8c6efb4bd712', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087a3550>]}
+[0m09:27:53.128388 [info ] [MainThread]: 
+[0m09:27:53.128581 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m09:27:53.128723 [info ] [MainThread]: 
+[0m09:27:53.128976 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m09:27:53.130845 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mydb'
+[0m09:27:53.188013 [debug] [ThreadPool]: Using postgres connection "list_mydb"
+[0m09:27:53.188245 [debug] [ThreadPool]: On list_mydb: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "connection_name": "list_mydb"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m09:27:53.188408 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:27:53.256609 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.068 seconds
+[0m09:27:53.257307 [debug] [ThreadPool]: On list_mydb: Close
+[0m09:27:53.258026 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_mydb, now list_mydb_dbt_warehouse)
+[0m09:27:53.261370 [debug] [ThreadPool]: Using postgres connection "list_mydb_dbt_warehouse"
+[0m09:27:53.261548 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: BEGIN
+[0m09:27:53.261688 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:27:53.271595 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m09:27:53.271789 [debug] [ThreadPool]: Using postgres connection "list_mydb_dbt_warehouse"
+[0m09:27:53.271960 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "connection_name": "list_mydb_dbt_warehouse"} */
+select
+      'mydb' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_warehouse'
+    union all
+    select
+      'mydb' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_warehouse'
+    union all
+    select
+      'mydb' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt_warehouse'
+  
+[0m09:27:53.295821 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.024 seconds
+[0m09:27:53.296704 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: ROLLBACK
+[0m09:27:53.297198 [debug] [ThreadPool]: On list_mydb_dbt_warehouse: Close
+[0m09:27:53.300474 [debug] [MainThread]: Using postgres connection "master"
+[0m09:27:53.300676 [debug] [MainThread]: On master: BEGIN
+[0m09:27:53.300842 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:27:53.314522 [debug] [MainThread]: SQL status: BEGIN in 0.014 seconds
+[0m09:27:53.314814 [debug] [MainThread]: Using postgres connection "master"
+[0m09:27:53.315111 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m09:27:53.323931 [debug] [MainThread]: SQL status: SELECT 33 in 0.009 seconds
+[0m09:27:53.325125 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '60ccbd9f-05a1-4df6-b22b-8c6efb4bd712', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10835c490>]}
+[0m09:27:53.325414 [debug] [MainThread]: On master: ROLLBACK
+[0m09:27:53.325853 [debug] [MainThread]: Using postgres connection "master"
+[0m09:27:53.326026 [debug] [MainThread]: On master: BEGIN
+[0m09:27:53.326602 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m09:27:53.326831 [debug] [MainThread]: On master: COMMIT
+[0m09:27:53.327015 [debug] [MainThread]: Using postgres connection "master"
+[0m09:27:53.327178 [debug] [MainThread]: On master: COMMIT
+[0m09:27:53.327552 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m09:27:53.327729 [debug] [MainThread]: On master: Close
+[0m09:27:53.329536 [debug] [Thread-1 (]: Began running node model.maker_warehouse.genres
+[0m09:27:53.329752 [debug] [Thread-2 (]: Began running node model.maker_warehouse.movies
+[0m09:27:53.329965 [debug] [Thread-3 (]: Began running node model.maker_warehouse.streams
+[0m09:27:53.330156 [debug] [Thread-4 (]: Began running node model.maker_warehouse.users
+[0m09:27:53.330435 [info ] [Thread-1 (]: 1 of 4 START sql table model dbt_warehouse.genres .............................. [RUN]
+[0m09:27:53.330732 [info ] [Thread-2 (]: 2 of 4 START sql table model dbt_warehouse.movies .............................. [RUN]
+[0m09:27:53.331000 [info ] [Thread-3 (]: 3 of 4 START sql table model dbt_warehouse.streams ............................. [RUN]
+[0m09:27:53.331261 [info ] [Thread-4 (]: 4 of 4 START sql table model dbt_warehouse.users ............................... [RUN]
+[0m09:27:53.331517 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_mydb_dbt_warehouse, now model.maker_warehouse.genres)
+[0m09:27:53.331783 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.maker_warehouse.movies'
+[0m09:27:53.332033 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.maker_warehouse.streams'
+[0m09:27:53.332274 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.maker_warehouse.users'
+[0m09:27:53.332457 [debug] [Thread-1 (]: Began compiling node model.maker_warehouse.genres
+[0m09:27:53.332636 [debug] [Thread-2 (]: Began compiling node model.maker_warehouse.movies
+[0m09:27:53.332824 [debug] [Thread-3 (]: Began compiling node model.maker_warehouse.streams
+[0m09:27:53.332990 [debug] [Thread-4 (]: Began compiling node model.maker_warehouse.users
+[0m09:27:53.337169 [debug] [Thread-1 (]: Writing injected SQL for node "model.maker_warehouse.genres"
+[0m09:27:53.338947 [debug] [Thread-2 (]: Writing injected SQL for node "model.maker_warehouse.movies"
+[0m09:27:53.340735 [debug] [Thread-3 (]: Writing injected SQL for node "model.maker_warehouse.streams"
+[0m09:27:53.342325 [debug] [Thread-4 (]: Writing injected SQL for node "model.maker_warehouse.users"
+[0m09:27:53.342837 [debug] [Thread-1 (]: Began executing node model.maker_warehouse.genres
+[0m09:27:53.343026 [debug] [Thread-2 (]: Began executing node model.maker_warehouse.movies
+[0m09:27:53.343192 [debug] [Thread-3 (]: Began executing node model.maker_warehouse.streams
+[0m09:27:53.362278 [debug] [Thread-4 (]: Began executing node model.maker_warehouse.users
+[0m09:27:53.362503 [debug] [Thread-1 (]: Writing runtime sql for node "model.maker_warehouse.genres"
+[0m09:27:53.364313 [debug] [Thread-2 (]: Writing runtime sql for node "model.maker_warehouse.movies"
+[0m09:27:53.366751 [debug] [Thread-3 (]: Writing runtime sql for node "model.maker_warehouse.streams"
+[0m09:27:53.368417 [debug] [Thread-4 (]: Writing runtime sql for node "model.maker_warehouse.users"
+[0m09:27:53.368924 [debug] [Thread-2 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:27:53.369128 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.genres"
+[0m09:27:53.369320 [debug] [Thread-3 (]: Using postgres connection "model.maker_warehouse.streams"
+[0m09:27:53.369496 [debug] [Thread-2 (]: On model.maker_warehouse.movies: BEGIN
+[0m09:27:53.369716 [debug] [Thread-1 (]: On model.maker_warehouse.genres: BEGIN
+[0m09:27:53.369902 [debug] [Thread-4 (]: Using postgres connection "model.maker_warehouse.users"
+[0m09:27:53.370061 [debug] [Thread-3 (]: On model.maker_warehouse.streams: BEGIN
+[0m09:27:53.370223 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m09:27:53.370376 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:27:53.370535 [debug] [Thread-4 (]: On model.maker_warehouse.users: BEGIN
+[0m09:27:53.370683 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m09:27:53.370989 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m09:27:53.379068 [debug] [Thread-1 (]: SQL status: BEGIN in 0.009 seconds
+[0m09:27:53.379282 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.genres"
+[0m09:27:53.379568 [debug] [Thread-1 (]: On model.maker_warehouse.genres: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.genres"} */
+
+  
+    
+
+  create  table "mydb"."dbt_warehouse"."genres__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+
+SELECT
+    DISTINCT
+    genres
+FROM mydb.public.raw_netflix
+  );
+  
+[0m09:27:53.381108 [debug] [Thread-2 (]: SQL status: BEGIN in 0.011 seconds
+[0m09:27:53.381415 [debug] [Thread-2 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:27:53.381610 [debug] [Thread-2 (]: On model.maker_warehouse.movies: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.movies"} */
+
+  
+    
+
+  create  table "mydb"."dbt_warehouse"."movies__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+
+SELECT
+    DISTINCT
+    title,
+    genres,
+    release_date,
+    movie_id
+FROM mydb.public.raw_netflix
+  );
+  
+[0m09:27:53.381815 [debug] [Thread-3 (]: SQL status: BEGIN in 0.011 seconds
+[0m09:27:53.381978 [debug] [Thread-3 (]: Using postgres connection "model.maker_warehouse.streams"
+[0m09:27:53.382172 [debug] [Thread-3 (]: On model.maker_warehouse.streams: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.streams"} */
+
+  
+    
+
+  create  table "mydb"."dbt_warehouse"."streams__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    DISTINCT
+    id,
+    user_id,
+    movie_id,
+    genres,
+    datetime
+FROM mydb.public.raw_netflix
+  );
+  
+[0m09:27:53.382791 [debug] [Thread-4 (]: SQL status: BEGIN in 0.012 seconds
+[0m09:27:53.383007 [debug] [Thread-4 (]: Using postgres connection "model.maker_warehouse.users"
+[0m09:27:53.383243 [debug] [Thread-4 (]: On model.maker_warehouse.users: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.users"} */
+
+  
+    
+
+  create  table "mydb"."dbt_warehouse"."users__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+
+SELECT
+    DISTINCT
+    user_id
+FROM mydb.public.raw_netflix
+  );
+  
+[0m09:27:53.695082 [debug] [Thread-1 (]: SQL status: SELECT 1190 in 0.315 seconds
+[0m09:27:53.710382 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.genres"
+[0m09:27:53.710690 [debug] [Thread-1 (]: On model.maker_warehouse.genres: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.genres"} */
+alter table "mydb"."dbt_warehouse"."genres" rename to "genres__dbt_backup"
+[0m09:27:53.711723 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m09:27:53.713490 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.genres"
+[0m09:27:53.713683 [debug] [Thread-1 (]: On model.maker_warehouse.genres: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.genres"} */
+alter table "mydb"."dbt_warehouse"."genres__dbt_tmp" rename to "genres"
+[0m09:27:53.715083 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m09:27:53.723750 [debug] [Thread-1 (]: On model.maker_warehouse.genres: COMMIT
+[0m09:27:53.724033 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.genres"
+[0m09:27:53.724223 [debug] [Thread-1 (]: On model.maker_warehouse.genres: COMMIT
+[0m09:27:53.727435 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m09:27:53.730688 [debug] [Thread-1 (]: Applying DROP to: "mydb"."dbt_warehouse"."genres__dbt_backup"
+[0m09:27:53.733214 [debug] [Thread-1 (]: Using postgres connection "model.maker_warehouse.genres"
+[0m09:27:53.733461 [debug] [Thread-1 (]: On model.maker_warehouse.genres: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.genres"} */
+drop table if exists "mydb"."dbt_warehouse"."genres__dbt_backup" cascade
+[0m09:27:53.742918 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.009 seconds
+[0m09:27:53.745489 [debug] [Thread-1 (]: On model.maker_warehouse.genres: Close
+[0m09:27:53.747172 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '60ccbd9f-05a1-4df6-b22b-8c6efb4bd712', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b22e90>]}
+[0m09:27:53.747792 [info ] [Thread-1 (]: 1 of 4 OK created sql table model dbt_warehouse.genres ......................... [[32mSELECT 1190[0m in 0.41s]
+[0m09:27:53.748273 [debug] [Thread-1 (]: Finished running node model.maker_warehouse.genres
+[0m09:27:53.821191 [debug] [Thread-2 (]: SQL status: SELECT 8472 in 0.439 seconds
+[0m09:27:53.825658 [debug] [Thread-2 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:27:53.825933 [debug] [Thread-2 (]: On model.maker_warehouse.movies: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.movies"} */
+alter table "mydb"."dbt_warehouse"."movies" rename to "movies__dbt_backup"
+[0m09:27:53.827442 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m09:27:53.829138 [debug] [Thread-2 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:27:53.829338 [debug] [Thread-2 (]: On model.maker_warehouse.movies: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.movies"} */
+alter table "mydb"."dbt_warehouse"."movies__dbt_tmp" rename to "movies"
+[0m09:27:53.830019 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m09:27:53.830853 [debug] [Thread-2 (]: On model.maker_warehouse.movies: COMMIT
+[0m09:27:53.831035 [debug] [Thread-2 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:27:53.831194 [debug] [Thread-2 (]: On model.maker_warehouse.movies: COMMIT
+[0m09:27:53.870098 [debug] [Thread-2 (]: SQL status: COMMIT in 0.038 seconds
+[0m09:27:53.874710 [debug] [Thread-2 (]: Applying DROP to: "mydb"."dbt_warehouse"."movies__dbt_backup"
+[0m09:27:53.876082 [debug] [Thread-2 (]: Using postgres connection "model.maker_warehouse.movies"
+[0m09:27:53.876663 [debug] [Thread-2 (]: On model.maker_warehouse.movies: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.movies"} */
+drop table if exists "mydb"."dbt_warehouse"."movies__dbt_backup" cascade
+[0m09:27:53.886830 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.009 seconds
+[0m09:27:53.888926 [debug] [Thread-2 (]: On model.maker_warehouse.movies: Close
+[0m09:27:53.889709 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '60ccbd9f-05a1-4df6-b22b-8c6efb4bd712', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b2fd90>]}
+[0m09:27:53.890497 [info ] [Thread-2 (]: 2 of 4 OK created sql table model dbt_warehouse.movies ......................... [[32mSELECT 8472[0m in 0.56s]
+[0m09:27:53.891154 [debug] [Thread-2 (]: Finished running node model.maker_warehouse.movies
+[0m09:27:54.033133 [debug] [Thread-4 (]: SQL status: SELECT 161918 in 0.649 seconds
+[0m09:27:54.040578 [debug] [Thread-4 (]: Using postgres connection "model.maker_warehouse.users"
+[0m09:27:54.041235 [debug] [Thread-4 (]: On model.maker_warehouse.users: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.users"} */
+alter table "mydb"."dbt_warehouse"."users" rename to "users__dbt_backup"
+[0m09:27:54.042679 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m09:27:54.049405 [debug] [Thread-4 (]: Using postgres connection "model.maker_warehouse.users"
+[0m09:27:54.049995 [debug] [Thread-4 (]: On model.maker_warehouse.users: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.users"} */
+alter table "mydb"."dbt_warehouse"."users__dbt_tmp" rename to "users"
+[0m09:27:54.050962 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m09:27:54.052811 [debug] [Thread-4 (]: On model.maker_warehouse.users: COMMIT
+[0m09:27:54.053233 [debug] [Thread-4 (]: Using postgres connection "model.maker_warehouse.users"
+[0m09:27:54.053632 [debug] [Thread-4 (]: On model.maker_warehouse.users: COMMIT
+[0m09:27:54.072824 [debug] [Thread-4 (]: SQL status: COMMIT in 0.019 seconds
+[0m09:27:54.077140 [debug] [Thread-4 (]: Applying DROP to: "mydb"."dbt_warehouse"."users__dbt_backup"
+[0m09:27:54.078298 [debug] [Thread-4 (]: Using postgres connection "model.maker_warehouse.users"
+[0m09:27:54.078748 [debug] [Thread-4 (]: On model.maker_warehouse.users: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.users"} */
+drop table if exists "mydb"."dbt_warehouse"."users__dbt_backup" cascade
+[0m09:27:54.092842 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.013 seconds
+[0m09:27:54.095061 [debug] [Thread-4 (]: On model.maker_warehouse.users: Close
+[0m09:27:54.096000 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '60ccbd9f-05a1-4df6-b22b-8c6efb4bd712', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c25010>]}
+[0m09:27:54.096770 [info ] [Thread-4 (]: 4 of 4 OK created sql table model dbt_warehouse.users .......................... [[32mSELECT 161918[0m in 0.76s]
+[0m09:27:54.097484 [debug] [Thread-4 (]: Finished running node model.maker_warehouse.users
+[0m09:27:55.068007 [debug] [Thread-3 (]: SQL status: SELECT 671736 in 1.685 seconds
+[0m09:27:55.080810 [debug] [Thread-3 (]: Using postgres connection "model.maker_warehouse.streams"
+[0m09:27:55.082458 [debug] [Thread-3 (]: On model.maker_warehouse.streams: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.streams"} */
+alter table "mydb"."dbt_warehouse"."streams__dbt_tmp" rename to "streams"
+[0m09:27:55.083915 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m09:27:55.085342 [debug] [Thread-3 (]: On model.maker_warehouse.streams: COMMIT
+[0m09:27:55.085562 [debug] [Thread-3 (]: Using postgres connection "model.maker_warehouse.streams"
+[0m09:27:55.085733 [debug] [Thread-3 (]: On model.maker_warehouse.streams: COMMIT
+[0m09:27:55.109729 [debug] [Thread-3 (]: SQL status: COMMIT in 0.024 seconds
+[0m09:27:55.114285 [debug] [Thread-3 (]: Applying DROP to: "mydb"."dbt_warehouse"."streams__dbt_backup"
+[0m09:27:55.115421 [debug] [Thread-3 (]: Using postgres connection "model.maker_warehouse.streams"
+[0m09:27:55.115997 [debug] [Thread-3 (]: On model.maker_warehouse.streams: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "maker_warehouse", "target_name": "dev", "node_id": "model.maker_warehouse.streams"} */
+drop table if exists "mydb"."dbt_warehouse"."streams__dbt_backup" cascade
+[0m09:27:55.116956 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m09:27:55.119079 [debug] [Thread-3 (]: On model.maker_warehouse.streams: Close
+[0m09:27:55.120069 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '60ccbd9f-05a1-4df6-b22b-8c6efb4bd712', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108bd9510>]}
+[0m09:27:55.120891 [info ] [Thread-3 (]: 3 of 4 OK created sql table model dbt_warehouse.streams ........................ [[32mSELECT 671736[0m in 1.79s]
+[0m09:27:55.121548 [debug] [Thread-3 (]: Finished running node model.maker_warehouse.streams
+[0m09:27:55.122945 [debug] [MainThread]: Using postgres connection "master"
+[0m09:27:55.123193 [debug] [MainThread]: On master: BEGIN
+[0m09:27:55.123351 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m09:27:55.133305 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m09:27:55.133576 [debug] [MainThread]: On master: COMMIT
+[0m09:27:55.133755 [debug] [MainThread]: Using postgres connection "master"
+[0m09:27:55.133896 [debug] [MainThread]: On master: COMMIT
+[0m09:27:55.134292 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m09:27:55.134451 [debug] [MainThread]: On master: Close
+[0m09:27:55.134690 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:27:55.134829 [debug] [MainThread]: Connection 'model.maker_warehouse.genres' was properly closed.
+[0m09:27:55.134958 [debug] [MainThread]: Connection 'model.maker_warehouse.movies' was properly closed.
+[0m09:27:55.135078 [debug] [MainThread]: Connection 'model.maker_warehouse.streams' was properly closed.
+[0m09:27:55.135198 [debug] [MainThread]: Connection 'model.maker_warehouse.users' was properly closed.
+[0m09:27:55.135426 [info ] [MainThread]: 
+[0m09:27:55.135604 [info ] [MainThread]: Finished running 4 table models in 0 hours 0 minutes and 2.01 seconds (2.01s).
+[0m09:27:55.136147 [debug] [MainThread]: Command end result
+[0m09:27:55.156443 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/manifest.json
+[0m09:27:55.158971 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/semantic_manifest.json
+[0m09:27:55.163925 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/harrydonnelly/Documents/Proj/dbt_datawarehousing/dbt_projects/target/run_results.json
+[0m09:27:55.164131 [info ] [MainThread]: 
+[0m09:27:55.164356 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:27:55.164541 [info ] [MainThread]: 
+[0m09:27:55.164795 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m09:27:55.168219 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.5543983, "process_in_blocks": "0", "process_kernel_time": 0.224303, "process_mem_max_rss": "131858432", "process_out_blocks": "0", "process_user_time": 1.219269}
+[0m09:27:55.168670 [debug] [MainThread]: Command `dbt run` succeeded at 09:27:55.168616 after 2.56 seconds
+[0m09:27:55.168997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102e98ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075e1250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106941410>]}
+[0m09:27:55.169223 [debug] [MainThread]: Flushing usage events
+[0m09:27:55.678238 [debug] [MainThread]: An error was encountered while trying to flush usage events

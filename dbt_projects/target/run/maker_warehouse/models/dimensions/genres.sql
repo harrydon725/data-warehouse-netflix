@@ -10,10 +10,8 @@
   (
     
 
-
-SELECT
-    DISTINCT
-    genres
-FROM mydb.public.raw_netflix
+select distinct
+  genres as genre  
+from mydb.public.raw_netflix
   );
   

@@ -1,9 +1,6 @@
-{{ config(
-    materialized = 'table',
-)}}
 
+{{ config(materialized='table') }}
 
-SELECT
-    DISTINCT
-    genres
-FROM {{ source("raw", "raw_netflix") }}
+select distinct
+  genres as genre  
+from {{ source('raw','raw_netflix') }}
